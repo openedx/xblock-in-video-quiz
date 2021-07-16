@@ -51,7 +51,7 @@ pycodestyle==2.7.0
     # via -r requirements/quality.in
 pylint==2.9.3
     # via -r requirements/quality.in
-python-dateutil==2.8.1
+python-dateutil==2.8.2
     # via
     #   -r requirements/base.txt
     #   xblock
@@ -65,7 +65,7 @@ pyyaml==5.4.1
     # via
     #   -r requirements/base.txt
     #   xblock
-simplejson==3.17.2
+simplejson==3.17.3
     # via
     #   -r requirements/base.txt
     #   xblock-utils
@@ -80,7 +80,7 @@ sqlparse==0.4.1
     #   django
 toml==0.10.2
     # via pylint
-web-fragments==1.0.0
+web-fragments==1.1.0
     # via
     #   -r requirements/base.txt
     #   xblock
