@@ -4,12 +4,14 @@ videos at specific time points.
 """
 
 import os
+import json
 import pkg_resources
 
 from xblock.core import XBlock
 from xblock.fields import Scope
 from xblock.fields import String
 from xblock.fragment import Fragment
+from xblock.validation import ValidationMessage
 from xblockutils.studio_editable import StudioEditableXBlockMixin
 
 from .utils import _
@@ -39,12 +41,13 @@ class InVideoQuizXBlock(StudioEditableXBlockMixin, XBlock):
     )
 
     video_id = String(
-        display_name=_('Video ID'),
+        display_name=_('Video Location'),
         default='',
         scope=Scope.settings,
         help=_(
             'This is the component ID for the video in which '
-            'you want to insert your quiz question.'
+            'you want to insert your quiz questions. It can be '
+            'obtained from staff debug info of the video in the LMS.'
         ),
     )
 
@@ -55,7 +58,9 @@ class InVideoQuizXBlock(StudioEditableXBlockMixin, XBlock):
         help=_(
             'A simple string field to define problem IDs '
             'and their time maps (in seconds) as JSON. '
-            'Example: {"60": "50srvqlii4ru9gonprp35gkcfyd5weju"}'
+            'Example: {"60": "50srvqlii4ru9gonprp35gkcfyd5weju"} '
+            'Problem IDs can be obatined from staff debug info of '
+            'the problems in the LMS.'
         ),
         multiline_editor=True,
     )
@@ -64,6 +69,18 @@ class InVideoQuizXBlock(StudioEditableXBlockMixin, XBlock):
         'video_id',
         'timemap',
     ]
+
+    def validate_field_data(self, validation, data):
+        """
+        Validate the user-submitted timemap.
+        """
+        try:
+            json.loads(data.timemap)
+        except ValueError:
+            _ = self.runtime.service(self, "i18n").ugettext
+            validation.add(ValidationMessage(ValidationMessage.ERROR, str(
+                _("Invalid Timemap")
+            )))
 
     # Decorate the view in order to support multiple devices e.g. mobile
     # See: https://openedx.atlassian.net/wiki/display/MA/Course+Blocks+API
