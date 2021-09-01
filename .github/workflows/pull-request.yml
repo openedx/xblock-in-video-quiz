@@ -1,0 +1,24 @@
+---
+name: validate changes
+on:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        python-version:
+        - '3.8'
+        TOX_ENV:
+        - coverage
+        - quality
+        - django22
+        - django30
+        - django31
+    steps:
+    - uses: actions/checkout@v2
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - run: make ci.test TOX_ENV=${{ matrix.TOX_ENV }}
