@@ -12,7 +12,7 @@ root folder:
 
 .. code:: bash
 
-    $ pip install -r requirements.txt
+    $ make requirements
 
 Enabling in Studio
 ------------------
