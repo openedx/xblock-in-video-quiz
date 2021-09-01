@@ -1,5 +1,5 @@
-In Video Quiz XBlock |BS| |CA|
-==============================
+In Video Quiz XBlock
+====================
 
 This XBlock allows for edX components to be displayed to users inside of videos at specific time points.
 
@@ -38,10 +38,3 @@ License
 -------
 
 The In Video Quiz XBlock is available under the AGPL Version 3.0 License.
-
-
-.. |BS| image:: https://travis-ci.com/edx/xblock-in-video-quiz.svg?branch=master
-  :target: https://travis-ci.com/github/edx/xblock-in-video-quiz
-
-.. |CA| image:: https://coveralls.io/repos/Stanford-Online/xblock-in-video-quiz/badge.svg?branch=master&service=github
-  :target: https://coveralls.io/github/Stanford-Online/xblock-in-video-quiz?branch=master
