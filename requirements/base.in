@@ -2,7 +2,6 @@
 -c constraints.txt
 
 Django
-django_nose
 six
 XBlock
 xblock-utils
