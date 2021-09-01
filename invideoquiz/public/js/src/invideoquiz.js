@@ -26,7 +26,7 @@ function InVideoQuizXBlock(runtime, element) {
     var displayIntervalTimeout = 1500;
 
     $(function () {
-        $('#seq_content .vert-mod .vert').each(function () {
+        $('#seq_content .vert-mod .vert, #course-content .vert-mod .vert').each(function () {
             var component = $(this);
 
             if (studentMode) {
@@ -119,7 +119,7 @@ function InVideoQuizXBlock(runtime, element) {
             var problemToDisplayId = problemTimesMap[videoTime];
             if (problemToDisplayId && canDisplayProblem) {
               $('.wrapper-downloads, .video-controls', video).hide();
-              $('#seq_content .vert-mod .vert').each(function () {
+              $('#seq_content .vert-mod .vert, #course-content .vert-mod .vert').each(function () {
                 var isProblemToDisplay = $(this).data('id').indexOf(problemToDisplayId) !== -1;
                 if (isProblemToDisplay) {
                   problemToDisplay = $('.xblock-student_view', this)
