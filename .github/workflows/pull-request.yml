@@ -1,4 +1,3 @@
----
 name: validate changes
 on:
   pull_request:
@@ -9,12 +8,7 @@ jobs:
       matrix:
         python-version:
         - '3.8'
-        TOX_ENV:
-        - coverage
-        - quality
-        - django22
-        - django30
-        - django31
+        TOX_ENV: [coverage, quality, django22, django30, django31, django32]
     steps:
     - uses: actions/checkout@v2
     - name: setup python
