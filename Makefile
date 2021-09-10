@@ -3,8 +3,12 @@ COMMON_CONSTRAINTS_TXT=requirements/common_constraints.txt
 $(COMMON_CONSTRAINTS_TXT):
 	wget -O "$(@)" https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt || touch "$(@)"
 
+.PHONY: requirements
+requirements:  # Install required python packages
+	pip install -e .
+
 .PHONY: requirements_ci
-requirements_ci:  # Install required python packages
+requirements_ci:  # Install required python packages for testing
 	pip install -r requirements/travis.txt
 
 .PHONY: ci.test
