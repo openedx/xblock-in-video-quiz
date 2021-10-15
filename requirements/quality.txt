@@ -14,7 +14,7 @@ attrs==21.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
-coverage==6.0.1
+coverage==6.0.2
     # via -r requirements/test.txt
 django==2.2.24
     # via
@@ -63,7 +63,7 @@ py==1.10.0
     # via
     #   -r requirements/test.txt
     #   pytest
-pycodestyle==2.7.0
+pycodestyle==2.8.0
     # via -r requirements/quality.in
 pylint==2.11.1
     # via -r requirements/quality.in
@@ -87,7 +87,7 @@ pytz==2021.3
     #   django
     #   fs
     #   xblock
-pyyaml==5.4.1
+pyyaml==6.0
     # via
     #   -r requirements/base.txt
     #   xblock

@@ -6,7 +6,7 @@
 #
 attrs==21.2.0
     # via pytest
-coverage==6.0.1
+coverage==6.0.2
     # via -r requirements/test.in
 iniconfig==1.1.1
     # via pytest
