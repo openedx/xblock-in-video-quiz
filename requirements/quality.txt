@@ -8,7 +8,11 @@ appdirs==1.4.4
     # via
     #   -r requirements/base.txt
     #   fs
-astroid==2.8.4
+asgiref==3.4.1
+    # via
+    #   -r requirements/base.txt
+    #   django
+astroid==2.8.5
     # via pylint
 attrs==21.2.0
     # via
@@ -16,11 +20,11 @@ attrs==21.2.0
     #   pytest
 coverage==6.1.2
     # via -r requirements/test.txt
-django==2.2.24
+django==3.2.9
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
-fs==2.4.13
+fs==2.4.14
     # via
     #   -r requirements/base.txt
     #   xblock
@@ -36,7 +40,7 @@ lxml==4.6.4
     # via
     #   -r requirements/base.txt
     #   xblock
-mako==1.1.5
+mako==1.1.6
     # via
     #   -r requirements/base.txt
     #   xblock-utils
@@ -49,7 +53,7 @@ mccabe==0.6.1
     # via pylint
 mock==4.0.3
     # via -r requirements/test.txt
-packaging==21.2
+packaging==21.3
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -67,7 +71,7 @@ pycodestyle==2.8.0
     # via -r requirements/quality.in
 pylint==2.11.1
     # via -r requirements/quality.in
-pyparsing==2.4.7
+pyparsing==3.0.6
     # via
     #   -r requirements/test.txt
     #   packaging
@@ -91,7 +95,7 @@ pyyaml==6.0
     # via
     #   -r requirements/base.txt
     #   xblock
-simplejson==3.17.5
+simplejson==3.17.6
     # via
     #   -r requirements/base.txt
     #   xblock-utils
@@ -109,7 +113,7 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   pylint
     #   pytest
-typing-extensions==3.10.0.2
+typing-extensions==4.0.0
     # via
     #   astroid
     #   pylint
