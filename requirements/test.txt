@@ -6,7 +6,7 @@
 #
 attrs==21.2.0
     # via pytest
-coverage==6.1.2
+coverage==6.2
     # via -r requirements/test.in
 iniconfig==1.1.1
     # via pytest
@@ -22,7 +22,7 @@ pyparsing==3.0.6
     # via packaging
 pytest==6.2.5
     # via pytest-django
-pytest-django==4.4.0
+pytest-django==4.5.1
     # via -r requirements/test.in
 toml==0.10.2
     # via pytest
