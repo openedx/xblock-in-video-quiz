@@ -18,7 +18,7 @@ attrs==21.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
-coverage==6.1.2
+coverage==6.2
     # via -r requirements/test.txt
 django==3.2.9
     # via
@@ -79,7 +79,7 @@ pytest==6.2.5
     # via
     #   -r requirements/test.txt
     #   pytest-django
-pytest-django==4.4.0
+pytest-django==4.5.1
     # via -r requirements/test.txt
 python-dateutil==2.8.2
     # via
@@ -113,7 +113,7 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   pylint
     #   pytest
-typing-extensions==4.0.0
+typing-extensions==4.0.1
     # via
     #   astroid
     #   pylint
