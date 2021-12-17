@@ -14,7 +14,7 @@ django==3.2.10
     #   -r requirements/base.in
 fs==2.4.14
     # via xblock
-lxml==4.6.4
+lxml==4.7.1
     # via xblock
 mako==1.1.6
     # via xblock-utils
@@ -40,7 +40,7 @@ six==1.16.0
     #   python-dateutil
 sqlparse==0.4.2
     # via django
-web-fragments==1.1.0
+web-fragments==2.0.0
     # via
     #   xblock
     #   xblock-utils
