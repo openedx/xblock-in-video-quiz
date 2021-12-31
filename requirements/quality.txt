@@ -14,7 +14,7 @@ asgiref==3.4.1
     #   django
 astroid==2.9.0
     # via pylint
-attrs==21.2.0
+attrs==21.4.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -34,9 +34,9 @@ iniconfig==1.1.1
     #   pytest
 isort==5.10.1
     # via pylint
-lazy-object-proxy==1.6.0
+lazy-object-proxy==1.7.1
     # via astroid
-lxml==4.6.4
+lxml==4.7.1
     # via
     #   -r requirements/base.txt
     #   xblock
@@ -57,7 +57,7 @@ packaging==21.3
     # via
     #   -r requirements/test.txt
     #   pytest
-platformdirs==2.4.0
+platformdirs==2.4.1
     # via pylint
 pluggy==1.0.0
     # via
@@ -117,7 +117,7 @@ typing-extensions==4.0.1
     # via
     #   astroid
     #   pylint
-web-fragments==1.1.0
+web-fragments==2.0.0
     # via
     #   -r requirements/base.txt
     #   xblock

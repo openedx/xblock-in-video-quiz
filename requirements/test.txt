@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-attrs==21.2.0
+attrs==21.4.0
     # via pytest
 coverage==6.2
     # via -r requirements/test.in
