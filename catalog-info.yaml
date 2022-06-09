@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: xblock-in-video-quiz
+  annotations:
+    github.com/project-slug: openedx/xblock-in-video-quiz
+spec:
+  type: other
+  lifecycle: unknown
+  owner: tcril-staff
