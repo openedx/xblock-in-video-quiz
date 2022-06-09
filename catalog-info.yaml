@@ -5,6 +5,6 @@ metadata:
   annotations:
     github.com/project-slug: openedx/xblock-in-video-quiz
 spec:
-  type: other
-  lifecycle: unknown
+  type: xblock 
+  lifecycle: unmaintained
   owner: tcril-staff
