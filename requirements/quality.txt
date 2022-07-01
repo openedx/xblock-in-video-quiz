@@ -42,7 +42,7 @@ lxml==4.9.0
     # via
     #   -r requirements/base.txt
     #   xblock
-mako==1.2.0
+mako==1.2.1
     # via
     #   -r requirements/base.txt
     #   xblock-utils
@@ -71,7 +71,7 @@ py==1.11.0
     #   pytest
 pycodestyle==2.8.0
     # via -r requirements/quality.in
-pylint==2.14.3
+pylint==2.14.4
     # via -r requirements/quality.in
 pyparsing==3.0.9
     # via
