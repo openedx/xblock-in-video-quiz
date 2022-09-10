@@ -138,7 +138,7 @@ setup(
     ],
     install_requires=load_requirements('requirements/base.in'),
     dependency_links=[
-        'https://github.com/edx/xblock-utils/tarball/c39bf653e4f27fb3798662ef64cde99f57603f79#egg=xblock-utils',
+        'https://github.com/openedx/xblock-utils/tarball/c39bf653e4f27fb3798662ef64cde99f57603f79#egg=xblock-utils',
     ],
     entry_points={
         'xblock.v1': [
