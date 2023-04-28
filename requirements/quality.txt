@@ -59,7 +59,7 @@ packaging==23.1
     # via
     #   -r requirements/test.txt
     #   pytest
-platformdirs==3.4.0
+platformdirs==3.5.0
     # via pylint
 pluggy==1.0.0
     # via
