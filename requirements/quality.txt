@@ -14,11 +14,11 @@ asgiref==3.6.0
     #   django
 astroid==2.15.4
     # via pylint
-coverage==7.2.3
+coverage==7.2.5
     # via -r requirements/test.txt
 dill==0.3.6
     # via pylint
-django==3.2.18
+django==3.2.19
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
@@ -59,7 +59,7 @@ packaging==23.1
     # via
     #   -r requirements/test.txt
     #   pytest
-platformdirs==3.4.0
+platformdirs==3.5.1
     # via pylint
 pluggy==1.0.0
     # via
@@ -67,7 +67,7 @@ pluggy==1.0.0
     #   pytest
 pycodestyle==2.10.0
     # via -r requirements/quality.in
-pylint==2.17.3
+pylint==2.17.4
     # via -r requirements/quality.in
 pytest==7.3.1
     # via
