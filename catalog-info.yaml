@@ -7,4 +7,4 @@ metadata:
 spec:
   type: xblock 
   lifecycle: unmaintained
-  owner: tcril-engineering
+  owner: axim-engineering
