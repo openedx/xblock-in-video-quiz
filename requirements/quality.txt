@@ -8,13 +8,13 @@ appdirs==1.4.4
     # via
     #   -r requirements/base.txt
     #   fs
-asgiref==3.6.0
+asgiref==3.7.1
     # via
     #   -r requirements/base.txt
     #   django
 astroid==2.15.5
     # via pylint
-coverage==7.2.5
+coverage==7.2.6
     # via -r requirements/test.txt
 dill==0.3.6
     # via pylint
@@ -108,8 +108,10 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.11.8
     # via pylint
-typing-extensions==4.5.0
+typing-extensions==4.6.2
     # via
+    #   -r requirements/base.txt
+    #   asgiref
     #   astroid
     #   pylint
 web-fragments==2.0.0
