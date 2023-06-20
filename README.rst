@@ -3,6 +3,23 @@ In Video Quiz XBlock
 
 This XBlock allows for edX components to be displayed to users inside of videos at specific time points.
 
+License
+-------
+
+This software was forked from https://github.com/Stanford-Online/xblock-in-video-quiz
+
+All contribution made to those repositories, the last of which is tagged
+`final-bsd-3c-contribution`_, are licensed by the original contributors under
+the terms of the `BSD 3-Clause License`_.
+
+This software is now maintained for the purpose of the Open edX Project, which
+licenses any further contributions to this repository under `the AGPLv3 license`_.
+
+.. _final-bsd-3c-contribution: https://github.com/openedx/xblock-in-video-quiz/releases/tag/final-bsd-3c-contribution
+.. _BSD 3-Clause License: ./LICENSE-BSD-3c
+.. _the APGLv3 license: ./LICENSE
+
+
 Overview
 --------
 
