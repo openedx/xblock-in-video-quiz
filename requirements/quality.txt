@@ -59,7 +59,7 @@ packaging==23.1
     # via
     #   -r requirements/test.txt
     #   pytest
-platformdirs==3.7.0
+platformdirs==3.8.0
     # via pylint
 pluggy==1.2.0
     # via
@@ -69,7 +69,7 @@ pycodestyle==2.10.0
     # via -r requirements/quality.in
 pylint==2.17.4
     # via -r requirements/quality.in
-pytest==7.3.2
+pytest==7.4.0
     # via
     #   -r requirements/test.txt
     #   pytest-django
@@ -108,7 +108,7 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.11.8
     # via pylint
-typing-extensions==4.6.3
+typing-extensions==4.7.0
     # via
     #   -r requirements/base.txt
     #   asgiref
