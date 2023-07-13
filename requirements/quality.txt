@@ -12,17 +12,17 @@ asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
-astroid==2.15.5
+astroid==2.15.6
     # via pylint
 coverage==7.2.7
     # via -r requirements/test.txt
 dill==0.3.6
     # via pylint
-django==3.2.19
+django==3.2.20
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
-exceptiongroup==1.1.1
+exceptiongroup==1.1.2
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -38,7 +38,7 @@ isort==5.12.0
     # via pylint
 lazy-object-proxy==1.9.0
     # via astroid
-lxml==4.9.2
+lxml==4.9.3
     # via
     #   -r requirements/base.txt
     #   xblock
@@ -59,7 +59,7 @@ packaging==23.1
     # via
     #   -r requirements/test.txt
     #   pytest
-platformdirs==3.8.0
+platformdirs==3.8.1
     # via pylint
 pluggy==1.2.0
     # via
@@ -108,7 +108,7 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.11.8
     # via pylint
-typing-extensions==4.7.0
+typing-extensions==4.7.1
     # via
     #   -r requirements/base.txt
     #   asgiref
