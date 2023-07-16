@@ -29,7 +29,7 @@ packaging==23.1
     # via
     #   -r requirements/tox.txt
     #   tox
-platformdirs==3.8.1
+platformdirs==3.9.1
     # via
     #   -r requirements/tox.txt
     #   virtualenv
@@ -57,7 +57,7 @@ tox==3.28.0
     #   -r requirements/tox.txt
 urllib3==2.0.3
     # via requests
-virtualenv==20.23.1
+virtualenv==20.24.0
     # via
     #   -r requirements/tox.txt
     #   tox
