@@ -59,15 +59,15 @@ packaging==23.1
     # via
     #   -r requirements/test.txt
     #   pytest
-platformdirs==3.9.1
+platformdirs==3.10.0
     # via pylint
 pluggy==1.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
-pycodestyle==2.10.0
+pycodestyle==2.11.0
     # via -r requirements/quality.in
-pylint==2.17.4
+pylint==2.17.5
     # via -r requirements/quality.in
 pytest==7.4.0
     # via
@@ -106,7 +106,7 @@ tomli==2.0.1
     #   -r requirements/test.txt
     #   pylint
     #   pytest
-tomlkit==0.11.8
+tomlkit==0.12.1
     # via pylint
 typing-extensions==4.7.1
     # via
@@ -129,7 +129,7 @@ xblock==1.6.2
     # via
     #   -r requirements/base.txt
     #   xblock-utils
-xblock-utils==3.2.0
+xblock-utils==3.3.0
     # via -r requirements/base.txt
 
 # The following packages are considered to be unsafe in a requirements file:
