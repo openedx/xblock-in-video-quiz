@@ -132,6 +132,7 @@ setup(
     name='invideoquiz-xblock',
     version=VERSION,
     description='Helper XBlock to locate CAPA problems within videos.',
+    long_description='Helper XBlock to locate CAPA problems within videos.',
     license='AGPL v3',
     packages=[
         'invideoquiz',
