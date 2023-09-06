@@ -1,0 +1,59 @@
+/* CSS for InVideoQuizXBlock */
+
+#course-content .vert-mod,
+#seq_content .vert-mod {
+    position: relative;
+}
+#course-content .vert-mod .in-video-alert,
+#seq_content .vert-mod .in-video-alert {
+    padding: 5px 10px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+#course-content .vert-mod .vert.in-video-problem-wrapper,
+#seq_content .vert-mod .vert.in-video-problem-wrapper {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+#course-content .vert-mod .vert.in-video-problem-wrapper .in-video-problem,
+#seq_content .vert-mod .vert.in-video-problem-wrapper .in-video-problem {
+    position: absolute;
+    top: 35px;
+    padding: 25px 25px 0 25px;
+    background: white;
+    box-sizing: border-box;
+    width: 100%;
+    height: 467px;
+    overflow-y: scroll;
+    z-index: 99;
+}
+.video-fullscreen #course-content .vert-mod .vert.in-video-problem-wrapper .in-video-problem,
+.video-fullscreen #seq_content .vert-mod .vert.in-video-problem-wrapper .in-video-problem {
+    position: fixed;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 53px;
+    z-index: 10000;
+}
+.video-controls {
+    z-index: 100;
+}
+.video-fullscreen #course-content .vert-mod .video-controls .slider,
+.video-fullscreen #seq_content .vert-mod .video-controls .slider {
+    height: 13px;
+}
+.video-fullscreen #course-content .vert-mod .video-controls .slider .ui-slider-handle,
+.video-fullscreen #seq_content .vert-mod .video-controls .slider .ui-slider-handle {
+    height: 13px;
+    width: 13px;
+}
+.in-video-continue {
+    float: right;
+    height: 40px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
