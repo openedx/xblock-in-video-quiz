@@ -14,20 +14,20 @@ asgiref==3.7.2
     #   django
 astroid==2.15.6
     # via pylint
-boto3==1.28.40
+boto3==1.28.44
     # via
     #   -r requirements/base.txt
     #   fs-s3fs
-botocore==1.31.40
+botocore==1.31.44
     # via
     #   -r requirements/base.txt
     #   boto3
     #   s3transfer
-coverage==7.3.0
+coverage==7.3.1
     # via -r requirements/test.txt
 dill==0.3.7
     # via pylint
-django==3.2.20
+django==3.2.21
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
@@ -98,7 +98,7 @@ pycodestyle==2.11.0
     # via -r requirements/quality.in
 pylint==2.17.5
     # via -r requirements/quality.in
-pytest==7.4.1
+pytest==7.4.2
     # via
     #   -r requirements/test.txt
     #   pytest-django
@@ -109,7 +109,7 @@ python-dateutil==2.8.2
     #   -r requirements/base.txt
     #   botocore
     #   xblock
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   -r requirements/base.txt
     #   django

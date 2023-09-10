@@ -61,7 +61,7 @@ typing-extensions==4.7.1
     #   filelock
 urllib3==2.0.4
     # via requests
-virtualenv==20.24.4
+virtualenv==20.24.5
     # via
     #   -r requirements/tox.txt
     #   tox
