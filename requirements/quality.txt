@@ -12,13 +12,13 @@ asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
-astroid==2.15.6
+astroid==2.15.7
     # via pylint
-boto3==1.28.44
+boto3==1.28.53
     # via
     #   -r requirements/base.txt
     #   fs-s3fs
-botocore==1.31.44
+botocore==1.31.53
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -57,7 +57,7 @@ jmespath==1.0.1
     #   -r requirements/base.txt
     #   boto3
     #   botocore
-lazy==1.5
+lazy==1.6
     # via
     #   -r requirements/base.txt
     #   xblock
@@ -143,7 +143,7 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.12.1
     # via pylint
-typing-extensions==4.7.1
+typing-extensions==4.8.0
     # via
     #   -r requirements/base.txt
     #   asgiref
