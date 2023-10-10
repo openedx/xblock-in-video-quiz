@@ -12,7 +12,7 @@ from xblock.fields import Scope
 from xblock.fields import String
 from xblock.fragment import Fragment
 from xblock.validation import ValidationMessage
-from xblockutils.studio_editable import StudioEditableXBlockMixin
+from xblock.utils.studio_editable import StudioEditableXBlockMixin
 
 from .utils import _
 
