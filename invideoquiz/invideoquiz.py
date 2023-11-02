@@ -12,7 +12,12 @@ from xblock.fields import Scope
 from xblock.fields import String
 from xblock.fragment import Fragment
 from xblock.validation import ValidationMessage
-from xblock.utils.studio_editable import StudioEditableXBlockMixin
+try:
+    from xblock.utils.studio_editable import StudioEditableXBlockMixin
+except ModuleNotFoundError:
+    # For backward compatibility with releases older than Quince.
+    from xblockutils.studio_editable import StudioEditableXBlockMixin
+
 
 from .utils import _
 
