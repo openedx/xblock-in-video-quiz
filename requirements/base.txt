@@ -16,7 +16,7 @@ fs==2.4.16
     # via xblock
 lxml==4.9.3
     # via xblock
-mako==1.2.4
+mako==1.3.0
     # via xblock
 markupsafe==2.1.3
     # via
