@@ -6,7 +6,7 @@
 #
 coverage==7.3.2
     # via -r requirements/test.in
-exceptiongroup==1.1.3
+exceptiongroup==1.2.0
     # via pytest
 iniconfig==2.0.0
     # via pytest
