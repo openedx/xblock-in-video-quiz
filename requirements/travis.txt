@@ -24,7 +24,7 @@ coverage==6.5.0
     # via coveralls
 coveralls==3.3.1
     # via -r requirements/travis.in
-distlib==0.3.7
+distlib==0.3.8
     # via
     #   -r requirements/tox.txt
     #   virtualenv
