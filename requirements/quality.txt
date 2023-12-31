@@ -14,7 +14,7 @@ asgiref==3.7.2
     #   django
 astroid==3.0.2
     # via pylint
-coverage==7.3.4
+coverage==7.4.0
     # via -r requirements/test.txt
 dill==0.3.7
     # via pylint
@@ -36,7 +36,7 @@ iniconfig==2.0.0
     #   pytest
 isort==5.13.2
     # via pylint
-lxml==4.9.4
+lxml==5.0.0
     # via
     #   -r requirements/base.txt
     #   xblock
