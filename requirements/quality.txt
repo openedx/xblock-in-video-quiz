@@ -14,9 +14,9 @@ asgiref==3.7.2
     #   django
 astroid==3.0.2
     # via pylint
-coverage==7.4.0
+coverage==7.4.1
     # via -r requirements/test.txt
-dill==0.3.7
+dill==0.3.8
     # via pylint
 django==3.2.23
     # via
@@ -59,7 +59,7 @@ packaging==23.2
     #   pytest
 platformdirs==4.1.0
     # via pylint
-pluggy==1.3.0
+pluggy==1.4.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -67,7 +67,7 @@ pycodestyle==2.11.1
     # via -r requirements/quality.in
 pylint==3.0.3
     # via -r requirements/quality.in
-pytest==7.4.4
+pytest==8.0.0
     # via
     #   -r requirements/test.txt
     #   pytest-django
@@ -120,7 +120,7 @@ webob==1.8.7
     # via
     #   -r requirements/base.txt
     #   xblock
-xblock==1.9.1
+xblock==1.10.0
     # via -r requirements/base.txt
 
 # The following packages are considered to be unsafe in a requirements file:
