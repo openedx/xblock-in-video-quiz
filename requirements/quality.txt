@@ -12,13 +12,13 @@ asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
-astroid==3.0.2
+astroid==3.0.3
     # via pylint
 coverage==7.4.1
     # via -r requirements/test.txt
 dill==0.3.8
     # via pylint
-django==3.2.23
+django==3.2.24
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
