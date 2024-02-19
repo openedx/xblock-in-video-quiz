@@ -67,7 +67,7 @@ pycodestyle==2.11.1
     # via -r requirements/quality.in
 pylint==3.0.3
     # via -r requirements/quality.in
-pytest==8.0.0
+pytest==8.0.1
     # via
     #   -r requirements/test.txt
     #   pytest-django
