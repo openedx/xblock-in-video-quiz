@@ -14,7 +14,7 @@ asgiref==3.7.2
     #   django
 astroid==3.0.3
     # via pylint
-coverage==7.4.1
+coverage==7.4.3
     # via -r requirements/test.txt
 dill==0.3.8
     # via pylint
@@ -65,9 +65,9 @@ pluggy==1.4.0
     #   pytest
 pycodestyle==2.11.1
     # via -r requirements/quality.in
-pylint==3.0.3
+pylint==3.0.4
     # via -r requirements/quality.in
-pytest==8.0.1
+pytest==8.0.2
     # via
     #   -r requirements/test.txt
     #   pytest-django
