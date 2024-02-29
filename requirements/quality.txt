@@ -12,7 +12,7 @@ asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
-astroid==3.0.3
+astroid==3.1.0
     # via pylint
 coverage==7.4.3
     # via -r requirements/test.txt
@@ -65,7 +65,7 @@ pluggy==1.4.0
     #   pytest
 pycodestyle==2.11.1
     # via -r requirements/quality.in
-pylint==3.0.4
+pylint==3.1.0
     # via -r requirements/quality.in
 pytest==8.0.2
     # via
@@ -106,7 +106,7 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.12.3
     # via pylint
-typing-extensions==4.9.0
+typing-extensions==4.10.0
     # via
     #   -r requirements/base.txt
     #   asgiref
