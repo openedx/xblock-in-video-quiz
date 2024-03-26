@@ -14,8 +14,9 @@ asgiref==3.8.1
     #   django
 astroid==3.1.0
     # via pylint
-backports-zoneinfo==0.2.1
+backports-zoneinfo==0.2.1 ; python_version < "3.9"
     # via
+    #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   django
 coverage==7.4.4
