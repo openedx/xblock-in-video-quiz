@@ -3,14 +3,20 @@ This XBlock allows for edX components to be displayed to users inside of
 videos at specific time points.
 """
 
-import os
 import json
+import os
+
 import pkg_resources
 
 from xblock.core import XBlock
 from xblock.fields import Scope
 from xblock.fields import String
-from xblock.fragment import Fragment
+
+try:
+    from web_fragments.fragment import Fragment
+except ImportError:
+    # For backward compatibility with quince and earlier.
+    from xblock.fragment import Fragment
 from xblock.validation import ValidationMessage
 try:
     from xblock.utils.studio_editable import StudioEditableXBlockMixin

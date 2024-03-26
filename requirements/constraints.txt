@@ -12,3 +12,4 @@
 
 # This file contains all common constraints for edx-repos
 -c common_constraints.txt
+backports.zoneinfo;python_version<"3.9"
