@@ -41,7 +41,7 @@ iniconfig==2.0.0
     #   pytest
 isort==5.13.2
     # via pylint
-lxml==5.1.0
+lxml==5.1.1
     # via
     #   -r requirements/base.txt
     #   xblock
