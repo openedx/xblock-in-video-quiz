@@ -41,7 +41,7 @@ iniconfig==2.0.0
     #   pytest
 isort==5.13.2
     # via pylint
-lxml==5.1.1
+lxml==5.2.1
     # via
     #   -r requirements/base.txt
     #   xblock
@@ -110,13 +110,13 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.12.4
     # via pylint
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via
     #   -r requirements/base.txt
     #   asgiref
     #   astroid
     #   pylint
-web-fragments==2.1.0
+web-fragments==2.2.0
     # via
     #   -r requirements/base.txt
     #   xblock
@@ -124,7 +124,7 @@ webob==1.8.7
     # via
     #   -r requirements/base.txt
     #   xblock
-xblock==3.0.0
+xblock==3.1.0
     # via -r requirements/base.txt
 
 # The following packages are considered to be unsafe in a requirements file:
