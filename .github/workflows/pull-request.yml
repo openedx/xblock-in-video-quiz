@@ -8,7 +8,8 @@ jobs:
       matrix:
         python-version:
         - '3.8'
-        TOX_ENV: [coverage, quality, django32, django42]
+        - '3.11'
+        TOX_ENV: [coverage, quality, django42]
     steps:
     - uses: actions/checkout@v2
     - name: setup python

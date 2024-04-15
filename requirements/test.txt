@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-coverage==7.4.1
+coverage==7.4.4
     # via -r requirements/test.in
 exceptiongroup==1.2.0
     # via pytest
@@ -12,11 +12,11 @@ iniconfig==2.0.0
     # via pytest
 mock==5.1.0
     # via -r requirements/test.in
-packaging==23.2
+packaging==24.0
     # via pytest
 pluggy==1.4.0
     # via pytest
-pytest==8.0.1
+pytest==8.1.1
     # via pytest-django
 pytest-django==4.8.0
     # via -r requirements/test.in
