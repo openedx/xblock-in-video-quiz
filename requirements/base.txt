@@ -18,9 +18,9 @@ django==4.2.13
     #   -r requirements/base.in
 fs==2.4.16
     # via xblock
-lxml==5.2.1
+lxml==5.2.2
     # via xblock
-mako==1.3.3
+mako==1.3.5
     # via xblock
 markupsafe==2.1.5
     # via
