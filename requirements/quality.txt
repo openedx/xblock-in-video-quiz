@@ -19,7 +19,7 @@ backports-zoneinfo==0.2.1 ; python_version < "3.9"
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   django
-coverage==7.5.1
+coverage==7.5.3
     # via -r requirements/test.txt
 dill==0.3.8
     # via pylint
@@ -110,7 +110,7 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.12.5
     # via pylint
-typing-extensions==4.12.0
+typing-extensions==4.12.1
     # via
     #   -r requirements/base.txt
     #   asgiref
