@@ -12,22 +12,22 @@ asgiref==3.8.1
     # via
     #   -r requirements/base.txt
     #   django
-astroid==3.2.2
+astroid==3.2.3
     # via pylint
 backports-zoneinfo==0.2.1 ; python_version < "3.9"
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   django
-coverage==7.5.4
+coverage==7.6.0
     # via -r requirements/test.txt
 dill==0.3.8
     # via pylint
-django==4.2.13
+django==4.2.14
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
-exceptiongroup==1.2.1
+exceptiongroup==1.2.2
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -108,7 +108,7 @@ tomli==2.0.1
     #   -r requirements/test.txt
     #   pylint
     #   pytest
-tomlkit==0.12.5
+tomlkit==0.13.0
     # via pylint
 typing-extensions==4.12.2
     # via
