@@ -61,9 +61,9 @@ pluggy==1.5.0
     #   pytest
 pycodestyle==2.12.0
     # via -r requirements/quality.in
-pylint==3.2.5
+pylint==3.2.6
     # via -r requirements/quality.in
-pytest==8.3.1
+pytest==8.3.2
     # via
     #   -r requirements/test.txt
     #   pytest-django
@@ -104,7 +104,7 @@ webob==1.8.7
     # via
     #   -r requirements/base.txt
     #   xblock
-xblock==4.0.1
+xblock==5.0.0
     # via -r requirements/base.txt
 
 # The following packages are considered to be unsafe in a requirements file:
