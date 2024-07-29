@@ -4,7 +4,6 @@ import os
 import re
 
 from setuptools import setup
-from setuptools.command.test import test as TestCommand
 
 
 def package_data(pkg, roots):
@@ -89,30 +88,6 @@ def is_requirement(line):
     return line and line.strip() and not line.startswith(('-r', '#', '-e', 'git+', '-c'))
 
 
-class Tox(TestCommand):
-    user_options = [('tox-args=', 'a', 'Arguments to pass to tox')]
-
-    def initialize_options(self):
-        TestCommand.initialize_options(self)
-        self.tox_args = None
-
-    def finalize_options(self):
-        TestCommand.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
-
-    def run_tests(self):
-        # import here, cause outside the eggs aren't loaded
-        import shlex
-
-        import tox
-        args = self.tox_args
-        if args:
-            args = shlex.split(self.tox_args)
-        errno = tox.cmdline(args=args)
-        sys.exit(errno)
-
-
 def get_version(file_path):
     """
     Extract the version string from the file at the given relative path fragments.
@@ -155,7 +130,6 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
     ],
