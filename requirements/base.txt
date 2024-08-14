@@ -10,8 +10,8 @@ asgiref==3.8.1
     # via django
 django==4.2.15
     # via
-    #   -c requirements/common_constraints.txt
-    #   -r requirements/base.in
+    #   -c common_constraints.txt
+    #   -r base.in
 fs==2.4.16
     # via xblock
 lxml==5.3.0
@@ -32,17 +32,17 @@ simplejson==3.19.2
     # via xblock
 six==1.16.0
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   fs
     #   python-dateutil
 sqlparse==0.5.1
     # via django
 web-fragments==2.2.0
     # via xblock
-webob==1.8.7
+webob==1.8.8
     # via xblock
 xblock==5.0.0
-    # via -r requirements/base.in
+    # via -r base.in
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
