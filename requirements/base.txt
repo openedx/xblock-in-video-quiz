@@ -28,7 +28,7 @@ pytz==2024.1
     # via xblock
 pyyaml==6.0.2
     # via xblock
-simplejson==3.19.2
+simplejson==3.19.3
     # via xblock
 six==1.16.0
     # via
@@ -39,7 +39,7 @@ sqlparse==0.5.1
     # via django
 web-fragments==2.2.0
     # via xblock
-webob==1.8.7
+webob==1.8.8
     # via xblock
 xblock==5.0.0
     # via -r requirements/base.in
