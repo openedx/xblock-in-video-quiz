@@ -6,26 +6,29 @@ videos at specific time points.
 import json
 import os
 
-import pkg_resources
-
 from xblock.core import XBlock
 from xblock.fields import Scope
 from xblock.fields import String
+from xblock.validation import ValidationMessage
 
 try:
     from web_fragments.fragment import Fragment
 except ImportError:
     # For backward compatibility with quince and earlier.
     from xblock.fragment import Fragment
-from xblock.validation import ValidationMessage
+
 try:
     from xblock.utils.studio_editable import StudioEditableXBlockMixin
+    from xblock.utils.resources import ResourceLoader
 except ModuleNotFoundError:
     # For backward compatibility with releases older than Quince.
     from xblockutils.studio_editable import StudioEditableXBlockMixin
+    from xblockutils.resources import ResourceLoader
 
 
 from .utils import _
+
+resource_loader = ResourceLoader(__name__)
 
 
 def get_resource_string(path):
@@ -33,8 +36,7 @@ def get_resource_string(path):
     Retrieve string contents for the file path
     """
     path = os.path.join('public', path)
-    resource_string = pkg_resources.resource_string(__name__, path)
-    return resource_string.decode('utf8')
+    return resource_loader.load_unicode(path)
 
 
 class InVideoQuizXBlock(StudioEditableXBlockMixin, XBlock):
