@@ -3,7 +3,7 @@ on:
   pull_request:
 jobs:
   validate:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: ['3.11', '3.12']
