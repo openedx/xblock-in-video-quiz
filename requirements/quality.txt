@@ -13,7 +13,18 @@ asgiref==3.8.1
     #   -r requirements/base.txt
     #   django
 astroid==3.3.4
-    # via pylint
+    # via
+    #   pylint
+    #   pylint-celery
+click==8.1.7
+    # via
+    #   click-log
+    #   code-annotations
+    #   edx-lint
+click-log==0.4.0
+    # via edx-lint
+code-annotations==1.8.0
+    # via edx-lint
 coverage==7.6.1
     # via -r requirements/test.txt
 dill==0.3.9
@@ -22,6 +33,8 @@ django==4.2.16
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
+edx-lint==5.4.0
+    # via -r requirements/quality.in
 fs==2.4.16
     # via
     #   -r requirements/base.txt
@@ -32,6 +45,8 @@ iniconfig==2.0.0
     #   pytest
 isort==5.13.2
     # via pylint
+jinja2==3.1.4
+    # via code-annotations
 lxml==5.3.0
     # via
     #   -r requirements/base.txt
@@ -43,6 +58,7 @@ mako==1.3.5
 markupsafe==2.1.5
     # via
     #   -r requirements/base.txt
+    #   jinja2
     #   mako
     #   xblock
 mccabe==0.7.0
@@ -53,6 +69,8 @@ packaging==24.1
     # via
     #   -r requirements/test.txt
     #   pytest
+pbr==6.1.0
+    # via stevedore
 platformdirs==4.3.6
     # via pylint
 pluggy==1.5.0
@@ -62,7 +80,24 @@ pluggy==1.5.0
 pycodestyle==2.12.1
     # via -r requirements/quality.in
 pylint==3.3.1
-    # via -r requirements/quality.in
+    # via
+    #   -r requirements/quality.in
+    #   edx-lint
+    #   pylint-celery
+    #   pylint-django
+    #   pylint-plugin-utils
+pylint-celery==0.3
+    # via
+    #   -r requirements/quality.in
+    #   edx-lint
+pylint-django==2.5.5
+    # via
+    #   -r requirements/quality.in
+    #   edx-lint
+pylint-plugin-utils==0.8.2
+    # via
+    #   pylint-celery
+    #   pylint-django
 pytest==8.3.3
     # via
     #   -r requirements/test.txt
@@ -73,6 +108,8 @@ python-dateutil==2.9.0.post0
     # via
     #   -r requirements/base.txt
     #   xblock
+python-slugify==8.0.4
+    # via code-annotations
 pytz==2024.2
     # via
     #   -r requirements/base.txt
@@ -80,6 +117,7 @@ pytz==2024.2
 pyyaml==6.0.2
     # via
     #   -r requirements/base.txt
+    #   code-annotations
     #   xblock
 simplejson==3.19.3
     # via
@@ -88,12 +126,17 @@ simplejson==3.19.3
 six==1.16.0
     # via
     #   -r requirements/base.txt
+    #   edx-lint
     #   fs
     #   python-dateutil
 sqlparse==0.5.1
     # via
     #   -r requirements/base.txt
     #   django
+stevedore==5.3.0
+    # via code-annotations
+text-unidecode==1.3
+    # via python-slugify
 tomlkit==0.13.2
     # via pylint
 web-fragments==2.2.0
