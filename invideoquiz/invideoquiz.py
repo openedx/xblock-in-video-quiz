@@ -40,7 +40,6 @@ def get_resource_string(path):
 
 
 class InVideoQuizXBlock(StudioEditableXBlockMixin, XBlock):
-    # pylint: disable=too-many-ancestors
     """
     Display CAPA problems within a video component at a specified time.
     """
@@ -165,7 +164,7 @@ class InVideoQuizXBlock(StudioEditableXBlockMixin, XBlock):
         resource_url = self.runtime.local_resource_url(self, path)
         return resource_url
 
-    def build_fragment(
+    def build_fragment(  # pylint: disable=too-many-positional-arguments
             self,
             path_html='',
             paths_css=None,

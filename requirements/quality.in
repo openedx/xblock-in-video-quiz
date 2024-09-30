@@ -6,3 +6,6 @@
 
 pycodestyle
 pylint
+edx-lint
+pylint-django
+pylint-celery
