@@ -58,10 +58,15 @@ You can enable the In Video Quiz XBlock in Studio through the
 advanced settings.
 
 1. From the main page of a specific course, navigate to
-   ``Settings ->    Advanced Settings`` from the top menu.
-2. Check for the ``advanced_modules`` policy key, and add
-   ``"invideoquiz"`` to the policy value list.
-3. Click the "Save changes" button.
+   ``Settings -> Advanced Settings`` from the top menu.
+2. Add the ``"invideoquiz"`` to your ``Advanced module list``.
+3. Click the "**Save changes**" button.
+
+.. image:: ./images/advanced-settings.png
+  :alt: Advanced Settings
+  :width: 500px
+  :align: center
+
 
 Configuration in Studio
 -----------------------
