@@ -5,6 +5,6 @@ metadata:
   annotations:
     github.com/project-slug: openedx/xblock-in-video-quiz
 spec:
-  type: xblock 
+  type: xblock
   lifecycle: unmaintained
   owner: axim-engineering

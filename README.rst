@@ -1,7 +1,7 @@
 In Video Quiz XBlock
 ====================
 
-This XBlock allows for edX components to be displayed to users inside of videos at specific time points.
+This XBlock allows for Open edX components to be displayed to users inside of videos at specific time points.
 
 License
 -------
@@ -17,13 +17,13 @@ licenses any further contributions to this repository under `the AGPLv3 license`
 
 .. _final-bsd-3c-contribution: https://github.com/openedx/xblock-in-video-quiz/releases/tag/final-bsd-3c-contribution
 .. _BSD 3-Clause License: ./LICENSE-BSD-3c
-.. _the APGLv3 license: ./LICENSE
+.. _the AGPLv3 license: ./LICENSE
 
 
 Overview
 --------
 
-This XBlock expects to have a Video component and a Problem component
+This XBlock expects to have a **Video component** and a **Problem component**
 added to the same Unit as itself.
 
 The XBlock is then configured (see below) to map timestamps (in seconds)
@@ -49,7 +49,7 @@ root folder:
 
 .. code:: bash
 
-    $ make requirements
+    make requirements
 
 Enabling in Studio
 ------------------
