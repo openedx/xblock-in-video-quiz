@@ -26,6 +26,35 @@ Multiple timestamps can be configured per video.
 Installation
 ------------
 
+Tutor
+*****
+
+To add the In Video Quiz XBlock package to Tutor, follow these steps:
+
+1. Add the package to the ``OPENEDX_EXTRA_PIP_REQUIREMENTS`` using the following command:
+
+.. code:: bash
+
+    tutor config save --append OPENEDX_EXTRA_PIP_REQUIREMENTS="git+https://github.com/openedx/xblock-in-video-quiz@LATEST_RELEASE"
+
+
+5. Rebuild the Open edX image to include the new package:
+
+   .. code:: bash
+
+       tutor images build openedx
+
+6. Start or restart the Open edX platform:
+
+   .. code:: bash
+
+       tutor local start -d
+
+The In Video Quiz XBlock should now be installed and available for use in your Open edX instance.
+
+Other
+*****
+
 Install the requirements into the python virtual environment of your
 ``edx-platform`` installation by running the following command from the
 root folder:
