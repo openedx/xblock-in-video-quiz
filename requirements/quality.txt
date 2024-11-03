@@ -33,7 +33,7 @@ django==4.2.16
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
-edx-lint==5.4.0
+edx-lint==5.4.1
     # via -r requirements/quality.in
 fs==2.4.16
     # via
