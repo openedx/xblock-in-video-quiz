@@ -89,7 +89,7 @@ function InVideoQuizXBlock(runtime, element) {
             }
         });
     }
-    
+
     function resizeInVideoProblem(currentProblem, dimensions) {
         currentProblem.css(dimensions);
     }
