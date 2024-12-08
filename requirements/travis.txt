@@ -20,7 +20,7 @@ colorama==0.4.6
     # via
     #   -r requirements/tox.txt
     #   tox
-coverage[toml]==7.6.8
+coverage[toml]==7.6.9
     # via coveralls
 coveralls==4.0.1
     # via -r requirements/travis.in
