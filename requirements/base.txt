@@ -35,7 +35,7 @@ six==1.17.0
     #   -r requirements/base.in
     #   fs
     #   python-dateutil
-sqlparse==0.5.2
+sqlparse==0.5.3
     # via django
 web-fragments==2.2.0
     # via xblock
