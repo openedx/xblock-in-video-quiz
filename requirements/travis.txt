@@ -59,8 +59,10 @@ requests==2.32.3
     # via coveralls
 tox==4.23.2
     # via -r requirements/tox.txt
-urllib3==2.3.0
-    # via requests
+urllib3==2.2.3
+    # via
+    #   -c requirements/common_constraints.txt
+    #   requests
 virtualenv==20.28.1
     # via
     #   -r requirements/tox.txt
