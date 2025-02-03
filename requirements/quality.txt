@@ -43,7 +43,7 @@ iniconfig==2.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.13.2
+isort==6.0.0
     # via pylint
 jinja2==3.1.5
     # via code-annotations
@@ -79,7 +79,7 @@ pluggy==1.5.0
     #   pytest
 pycodestyle==2.12.1
     # via -r requirements/quality.in
-pylint==3.3.3
+pylint==3.3.4
     # via
     #   -r requirements/quality.in
     #   edx-lint
@@ -110,7 +110,7 @@ python-dateutil==2.9.0.post0
     #   xblock
 python-slugify==8.0.4
     # via code-annotations
-pytz==2024.2
+pytz==2025.1
     # via
     #   -r requirements/base.txt
     #   xblock
