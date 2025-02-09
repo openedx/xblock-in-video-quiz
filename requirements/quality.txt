@@ -25,11 +25,11 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.2.0
     # via edx-lint
-coverage==7.6.10
+coverage==7.6.11
     # via -r requirements/test.txt
 dill==0.3.9
     # via pylint
-django==4.2.18
+django==4.2.19
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
@@ -51,7 +51,7 @@ lxml==5.3.0
     # via
     #   -r requirements/base.txt
     #   xblock
-mako==1.3.8
+mako==1.3.9
     # via
     #   -r requirements/base.txt
     #   xblock
@@ -69,7 +69,7 @@ packaging==24.2
     # via
     #   -r requirements/test.txt
     #   pytest
-pbr==6.1.0
+pbr==6.1.1
     # via stevedore
 platformdirs==4.3.6
     # via pylint
@@ -147,7 +147,7 @@ webob==1.8.9
     # via
     #   -r requirements/base.txt
     #   xblock
-xblock==5.1.1
+xblock==5.1.2
     # via -r requirements/base.txt
 
 # The following packages are considered to be unsafe in a requirements file:
