@@ -8,7 +8,7 @@ appdirs==1.4.4
     # via fs
 asgiref==3.8.1
     # via django
-django==4.2.19
+django==4.2.20
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.in
