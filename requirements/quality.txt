@@ -25,7 +25,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.2.0
     # via edx-lint
-coverage==7.6.12
+coverage==7.7.1
     # via -r requirements/test.txt
 dill==0.3.9
     # via pylint
@@ -39,7 +39,7 @@ fs==2.4.16
     # via
     #   -r requirements/base.txt
     #   xblock
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -71,7 +71,7 @@ packaging==24.2
     #   pytest
 pbr==6.1.1
     # via stevedore
-platformdirs==4.3.6
+platformdirs==4.3.7
     # via pylint
 pluggy==1.5.0
     # via
@@ -79,7 +79,7 @@ pluggy==1.5.0
     #   pytest
 pycodestyle==2.12.1
     # via -r requirements/quality.in
-pylint==3.3.5
+pylint==3.3.6
     # via
     #   -r requirements/quality.in
     #   edx-lint

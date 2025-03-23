@@ -20,7 +20,7 @@ colorama==0.4.6
     # via
     #   -r requirements/tox.txt
     #   tox
-coverage[toml]==7.6.12
+coverage[toml]==7.7.1
     # via coveralls
 coveralls==4.0.1
     # via -r requirements/travis.in
@@ -42,7 +42,7 @@ packaging==24.2
     #   -r requirements/tox.txt
     #   pyproject-api
     #   tox
-platformdirs==4.3.6
+platformdirs==4.3.7
     # via
     #   -r requirements/tox.txt
     #   tox
