@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.11', '3.12']
-        TOX_ENV: [coverage, quality, django42]
+        TOX_ENV: [coverage, quality, django42, django52]
     steps:
     - uses: actions/checkout@v4
     - name: setup python
