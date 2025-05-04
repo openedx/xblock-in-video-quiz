@@ -14,7 +14,7 @@ chardet==5.2.0
     # via
     #   -r requirements/tox.txt
     #   tox
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
 colorama==0.4.6
     # via
