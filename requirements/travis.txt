@@ -47,17 +47,17 @@ platformdirs==4.3.8
     #   -r requirements/tox.txt
     #   tox
     #   virtualenv
-pluggy==1.5.0
+pluggy==1.6.0
     # via
     #   -r requirements/tox.txt
     #   tox
-pyproject-api==1.9.0
+pyproject-api==1.9.1
     # via
     #   -r requirements/tox.txt
     #   tox
 requests==2.32.3
     # via coveralls
-tox==4.25.0
+tox==4.26.0
     # via -r requirements/tox.txt
 urllib3==2.2.3
     # via
