@@ -8,7 +8,7 @@ cachetools==6.1.0
     # via
     #   -r requirements/tox.txt
     #   tox
-certifi==2025.6.15
+certifi==2025.7.9
     # via requests
 chardet==5.2.0
     # via
