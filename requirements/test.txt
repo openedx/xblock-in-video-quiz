@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-coverage==7.9.2
+coverage==7.10.0
     # via -r requirements/test.in
 iniconfig==2.1.0
     # via pytest
