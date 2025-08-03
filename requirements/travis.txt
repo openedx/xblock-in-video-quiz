@@ -20,7 +20,7 @@ colorama==0.4.6
     # via
     #   -r requirements/tox.txt
     #   tox
-coverage[toml]==7.10.0
+coverage[toml]==7.10.1
     # via coveralls
 coveralls==4.0.1
     # via -r requirements/travis.in
@@ -57,12 +57,10 @@ pyproject-api==1.9.1
     #   tox
 requests==2.32.4
     # via coveralls
-tox==4.28.3
+tox==4.28.4
     # via -r requirements/tox.txt
-urllib3==2.2.3
-    # via
-    #   -c requirements/common_constraints.txt
-    #   requests
+urllib3==2.5.0
+    # via requests
 virtualenv==20.32.0
     # via
     #   -r requirements/tox.txt
