@@ -29,7 +29,7 @@ coverage==7.10.6
     # via -r requirements/test.txt
 dill==0.4.0
     # via pylint
-django==4.2.23
+django==4.2.24
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
@@ -100,7 +100,7 @@ pylint-plugin-utils==0.9.0
     # via
     #   pylint-celery
     #   pylint-django
-pytest==8.4.1
+pytest==8.4.2
     # via
     #   -r requirements/test.txt
     #   pytest-django

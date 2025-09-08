@@ -57,7 +57,7 @@ pyproject-api==1.9.1
     #   tox
 requests==2.32.5
     # via coveralls
-tox==4.29.0
+tox==4.30.2
     # via -r requirements/tox.txt
 urllib3==2.5.0
     # via requests
