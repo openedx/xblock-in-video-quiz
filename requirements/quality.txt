@@ -29,7 +29,7 @@ coverage==7.10.7
     # via -r requirements/test.txt
 dill==0.4.0
     # via pylint
-django==4.2.24
+django==4.2.25
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
@@ -43,7 +43,7 @@ iniconfig==2.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==6.0.1
+isort==6.1.0
     # via pylint
 jinja2==3.1.6
     # via code-annotations
