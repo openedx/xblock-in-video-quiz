@@ -8,7 +8,7 @@ cachetools==6.2.0
     # via
     #   -r requirements/tox.txt
     #   tox
-certifi==2025.8.3
+certifi==2025.10.5
     # via requests
 chardet==5.2.0
     # via
@@ -30,7 +30,7 @@ distlib==0.4.0
     #   virtualenv
 docopt==0.6.2
     # via coveralls
-filelock==3.19.1
+filelock==3.20.0
     # via
     #   -r requirements/tox.txt
     #   tox
@@ -42,7 +42,7 @@ packaging==25.0
     #   -r requirements/tox.txt
     #   pyproject-api
     #   tox
-platformdirs==4.4.0
+platformdirs==4.5.0
     # via
     #   -r requirements/tox.txt
     #   tox
@@ -51,17 +51,17 @@ pluggy==1.6.0
     # via
     #   -r requirements/tox.txt
     #   tox
-pyproject-api==1.9.1
+pyproject-api==1.10.0
     # via
     #   -r requirements/tox.txt
     #   tox
 requests==2.32.5
     # via coveralls
-tox==4.30.3
+tox==4.31.0
     # via -r requirements/tox.txt
 urllib3==2.5.0
     # via requests
-virtualenv==20.34.0
+virtualenv==20.35.3
     # via
     #   -r requirements/tox.txt
     #   tox
