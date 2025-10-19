@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-cachetools==6.2.0
+cachetools==6.2.1
     # via
     #   -r requirements/tox.txt
     #   tox
@@ -14,13 +14,13 @@ chardet==5.2.0
     # via
     #   -r requirements/tox.txt
     #   tox
-charset-normalizer==3.4.3
+charset-normalizer==3.4.4
     # via requests
 colorama==0.4.6
     # via
     #   -r requirements/tox.txt
     #   tox
-coverage[toml]==7.10.7
+coverage[toml]==7.11.0
     # via coveralls
 coveralls==4.0.1
     # via -r requirements/travis.in
@@ -35,7 +35,7 @@ filelock==3.20.0
     #   -r requirements/tox.txt
     #   tox
     #   virtualenv
-idna==3.10
+idna==3.11
     # via requests
 packaging==25.0
     # via
