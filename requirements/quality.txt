@@ -25,7 +25,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.3.0
     # via edx-lint
-coverage==7.10.7
+coverage==7.11.0
     # via -r requirements/test.txt
 dill==0.4.0
     # via pylint
@@ -39,7 +39,7 @@ fs==2.4.16
     # via
     #   -r requirements/base.txt
     #   xblock
-iniconfig==2.1.0
+iniconfig==2.3.0
     # via
     #   -r requirements/test.txt
     #   pytest
