@@ -25,11 +25,11 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.3.0
     # via edx-lint
-coverage==7.11.0
+coverage==7.11.1
     # via -r requirements/test.txt
 dill==0.4.0
     # via pylint
-django==4.2.25
+django==5.2.8
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
