@@ -131,7 +131,7 @@ six==1.17.0
     #   edx-lint
     #   fs
     #   python-dateutil
-sqlparse==0.5.3
+sqlparse==0.5.4
     # via
     #   -r requirements/base.txt
     #   django
