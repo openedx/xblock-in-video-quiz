@@ -16,7 +16,7 @@ pluggy==1.6.0
     # via pytest
 pygments==2.19.2
     # via pytest
-pytest==9.0.1
+pytest==9.0.2
     # via pytest-django
 pytest-django==4.11.1
     # via -r requirements/test.in
