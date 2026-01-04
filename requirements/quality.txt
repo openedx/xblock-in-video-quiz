@@ -12,7 +12,7 @@ asgiref==3.11.0
     # via
     #   -r requirements/base.txt
     #   django
-astroid==3.3.11
+astroid==4.0.3
     # via
     #   pylint
     #   pylint-celery
@@ -25,7 +25,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.3.0
     # via edx-lint
-coverage==7.13.0
+coverage==7.13.1
     # via -r requirements/test.txt
 dill==0.4.0
     # via pylint
@@ -43,7 +43,7 @@ iniconfig==2.3.0
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==6.1.0
+isort==7.0.0
     # via pylint
 jinja2==3.1.6
     # via code-annotations
@@ -81,7 +81,7 @@ pygments==2.19.2
     # via
     #   -r requirements/test.txt
     #   pytest
-pylint==3.3.9
+pylint==4.0.4
     # via
     #   -r requirements/quality.in
     #   edx-lint
@@ -92,7 +92,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/quality.in
     #   edx-lint
-pylint-django==2.6.1
+pylint-django==2.7.0
     # via
     #   -r requirements/quality.in
     #   edx-lint
