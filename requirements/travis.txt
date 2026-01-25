@@ -37,7 +37,7 @@ filelock==3.20.3
     #   virtualenv
 idna==3.11
     # via requests
-packaging==25.0
+packaging==26.0
     # via
     #   -r requirements/tox.txt
     #   pyproject-api
