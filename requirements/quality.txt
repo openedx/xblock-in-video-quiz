@@ -27,7 +27,7 @@ code-annotations==2.3.0
     # via edx-lint
 coverage==7.13.1
     # via -r requirements/test.txt
-dill==0.4.0
+dill==0.4.1
     # via pylint
 django==5.2.10
     # via
@@ -65,7 +65,7 @@ mccabe==0.7.0
     # via pylint
 mock==5.2.0
     # via -r requirements/test.txt
-packaging==25.0
+packaging==26.0
     # via
     #   -r requirements/test.txt
     #   pytest
