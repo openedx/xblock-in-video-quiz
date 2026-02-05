@@ -5,9 +5,12 @@ function InVideoQuizXBlock(runtime, element) {
     if (!videoId || !InVideoQuizXBlock.config.hasOwnProperty(videoId)) {
         return;
     }
-    var problemTimesMap = InVideoQuizXBlock.config[videoId];
+    var videoConfig = InVideoQuizXBlock.config[videoId];
+    var problemTimesMap = videoConfig.timemap || {};
+    var jumpBackValue = videoConfig.jumpBack || '';
     var studentMode = $('.in-video-quiz-block').data('mode') !== 'staff';
-    var extraVideoButton = '<button class="in-video-continue">Continue</button>';
+    var extraVideoButtons = '<button class="in-video-continue">Continue</button>' +
+      '<button class="in-video-jump-back">Jump Back</button>';
     var video;
     var videoState;
 
@@ -42,6 +45,75 @@ function InVideoQuizXBlock(runtime, element) {
         }
     });
 
+    function parseTimeToSeconds(value) {
+      var text = (value || '').toString();
+      if (text.indexOf(':') !== -1) {
+        var parts = text.split(':');
+        if (parts.length === 2) {
+          var minutes = parseInt(parts[0], 10);
+          var seconds = parseInt(parts[1], 10);
+          if (!isNaN(minutes) && !isNaN(seconds)) {
+            return (minutes * 60) + seconds;
+          }
+        }
+        return NaN;
+      }
+      return parseInt(text, 10);
+    }
+
+    function formatTimeFromSeconds(totalSeconds) {
+      var minutes = parseInt(totalSeconds / 60, 10);
+      var seconds = ('0' + (totalSeconds % 60)).slice(-2);
+      return minutes + ':' + seconds;
+    }
+
+    function parseJumpBackConfig(value) {
+      if (!value) {
+        return {map: {}, defaultValue: ''};
+      }
+      if (typeof value === 'object') {
+        return {map: value, defaultValue: ''};
+      }
+      if (typeof value === 'string') {
+        var trimmed = value.trim();
+        if (trimmed.charAt(0) === '{') {
+          try {
+            return {map: JSON.parse(trimmed), defaultValue: ''};
+          } catch (err) {
+            return {map: {}, defaultValue: ''};
+          }
+        }
+        return {map: {}, defaultValue: trimmed};
+      }
+      return {map: {}, defaultValue: ''};
+    }
+
+    function buildProblemTimesMap() {
+      var normalized = {};
+      $.each(problemTimesMap, function (time, componentId) {
+        var seconds = parseTimeToSeconds(time);
+        if (!isNaN(seconds)) {
+          normalized[seconds] = componentId;
+        }
+      });
+      return normalized;
+    }
+
+    function buildJumpBackTimesMap() {
+      var parsed = parseJumpBackConfig(jumpBackValue);
+      var normalized = {};
+      $.each(parsed.map, function (time, jumpTo) {
+        var seconds = parseTimeToSeconds(time);
+        if (!isNaN(seconds)) {
+          normalized[seconds] = jumpTo;
+        }
+      });
+      return {
+        map: normalized,
+        defaultValue: parsed.defaultValue
+      };
+    }
+
     function setUpStudentView(component) {
         var componentIsVideo = component.data('id').indexOf(videoId) !== -1;
         if (componentIsVideo) {
@@ -50,7 +122,7 @@ function InVideoQuizXBlock(runtime, element) {
             $.each(problemTimesMap, function (time, componentId) {
                 if (component.data('id').indexOf(componentId) !== -1) {
                     component.addClass('in-video-problem-wrapper');
-                    $('.xblock-student_view', component).append(extraVideoButton).addClass('in-video-problem').hide();
+            $('.xblock-student_view', component).append(extraVideoButtons).addClass('in-video-problem').hide();
                 }
             });
         }
@@ -82,9 +154,11 @@ function InVideoQuizXBlock(runtime, element) {
         $.each(problemTimesMap, function (time, componentId) {
             var isInVideoComponent = component.data('id').indexOf(componentId) !== -1;
             if (isInVideoComponent) {
-                var minutes = parseInt(time / 60, 10);
-                var seconds = ('0' + (time % 60)).slice(-2);
-                var timeParagraph = '<p class="in-video-alert"><i class="fa fa-exclamation-circle"></i>This component will appear in the video at <strong>' + minutes + ':' + seconds + '</strong></p>';
+          var displayTime = time;
+          if (time.toString().indexOf(':') === -1) {
+            displayTime = formatTimeFromSeconds(parseInt(time, 10));
+          }
+          var timeParagraph = '<p class="in-video-alert"><i class="fa fa-exclamation-circle"></i>This component will appear in the video at <strong>' + displayTime + '</strong></p>';
                 component.prepend(timeParagraph);
             }
         });
@@ -100,6 +174,9 @@ function InVideoQuizXBlock(runtime, element) {
         var intervalObject;
         var resizeIntervalObject;
         var problemToDisplay;
+        var currentProblemTime;
+        var normalizedProblemTimesMap = buildProblemTimesMap();
+        var jumpBackConfig = buildJumpBackTimesMap();
 
         video.on('play', function () {
           videoState = videoState || video.data('video-player-state');
@@ -112,11 +189,12 @@ function InVideoQuizXBlock(runtime, element) {
             }, displayIntervalTimeout);
             problemToDisplay.hide();
             problemToDisplay = null;
+            currentProblemTime = null;
           }
 
           intervalObject = setInterval(function () {
             var videoTime = parseInt(videoState.videoPlayer.currentTime, 10);
-            var problemToDisplayId = problemTimesMap[videoTime];
+            var problemToDisplayId = normalizedProblemTimesMap[videoTime];
             if (problemToDisplayId && canDisplayProblem) {
               $('.wrapper-downloads, .video-controls', video).hide();
               $('#seq_content .vert-mod .vert, #course-content .vert-mod .vert').each(function () {
@@ -128,6 +206,7 @@ function InVideoQuizXBlock(runtime, element) {
                   problemToDisplay.show();
                   problemToDisplay.css({display: 'block'});
                   canDisplayProblem = false;
+                  currentProblemTime = videoTime;
                 }
               });
             }
@@ -148,6 +227,20 @@ function InVideoQuizXBlock(runtime, element) {
             $('.in-video-continue', problemToDisplay).on('click', function () {
               $('.wrapper-downloads, .video-controls', video).show();
               videoState.videoPlayer.play();
+            });
+            $('.in-video-jump-back', problemToDisplay).on('click', function () {
+              var jumpBackTarget = jumpBackConfig.map[currentProblemTime];
+              var jumpBackSeconds = parseTimeToSeconds(jumpBackTarget || jumpBackConfig.defaultValue);
+              console.log('Jump back - currentProblemTime:', currentProblemTime, 'target:', jumpBackTarget, 'seconds:', jumpBackSeconds);
+              if (!isNaN(jumpBackSeconds)) {
+                $('.wrapper-downloads, .video-controls', video).show();
+                if (videoState.videoPlayer.player && videoState.videoPlayer.player.seekTo) {
+                  videoState.videoPlayer.player.seekTo(jumpBackSeconds);
+                } else {
+                  videoState.videoPlayer.currentTime = jumpBackSeconds;
+                }
+                videoState.videoPlayer.play();
+              }
             });
           }
         });
