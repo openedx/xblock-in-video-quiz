@@ -79,7 +79,7 @@ class InVideoQuizXBlock(StudioEditableXBlockMixin, XBlock):
 
     jump_back = String(
         display_name=_('Jump Back Time'),
-        default='00:00',
+        default='',
         scope=Scope.settings,
         help=_(
             'Time to jump back to when the learner clicks the Jump Back '
@@ -91,6 +91,7 @@ class InVideoQuizXBlock(StudioEditableXBlockMixin, XBlock):
         'video_id',
         'timemap',
         'jump_back',
+        'display_name',
     ]
 
     def validate_field_data(self, validation, data):
