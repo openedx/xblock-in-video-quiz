@@ -43,7 +43,7 @@ iniconfig==2.3.0
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==8.0.0
+isort==8.0.1
     # via pylint
 jinja2==3.1.6
     # via code-annotations
