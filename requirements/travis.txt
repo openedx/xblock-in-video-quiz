@@ -6,7 +6,7 @@
 #
 annotated-doc==0.0.4
     # via typer
-cachetools==7.0.3
+cachetools==7.0.5
     # via
     #   -r requirements/tox.txt
     #   tox
@@ -28,7 +28,7 @@ distlib==0.4.0
     # via
     #   -r requirements/tox.txt
     #   virtualenv
-filelock==3.25.0
+filelock==3.25.2
     # via
     #   -r requirements/tox.txt
     #   python-discovery
@@ -61,7 +61,7 @@ pyproject-api==1.10.0
     # via
     #   -r requirements/tox.txt
     #   tox
-python-discovery==1.1.1
+python-discovery==1.1.3
     # via
     #   -r requirements/tox.txt
     #   virtualenv
@@ -75,13 +75,13 @@ tomli-w==1.2.0
     # via
     #   -r requirements/tox.txt
     #   tox
-tox==4.49.0
+tox==4.49.1
     # via -r requirements/tox.txt
 typer==0.24.1
     # via coveralls
 urllib3==2.6.3
     # via requests
-virtualenv==21.1.0
+virtualenv==21.2.0
     # via
     #   -r requirements/tox.txt
     #   tox
