@@ -12,9 +12,9 @@ cachetools==7.0.5
     #   tox
 certifi==2026.2.25
     # via requests
-charset-normalizer==3.4.6
+charset-normalizer==3.4.7
     # via requests
-click==8.3.1
+click==8.3.2
     # via typer
 colorama==0.4.6
     # via
@@ -55,7 +55,7 @@ pluggy==1.6.0
     # via
     #   -r requirements/tox.txt
     #   tox
-pygments==2.19.2
+pygments==2.20.0
     # via rich
 pyproject-api==1.10.0
     # via
@@ -66,7 +66,7 @@ python-discovery==1.2.1
     #   -r requirements/tox.txt
     #   tox
     #   virtualenv
-requests==2.33.0
+requests==2.33.1
     # via coveralls
 rich==14.3.3
     # via typer
@@ -76,7 +76,7 @@ tomli-w==1.2.0
     # via
     #   -r requirements/tox.txt
     #   tox
-tox==4.51.0
+tox==4.52.0
     # via -r requirements/tox.txt
 typer==0.24.1
     # via coveralls
