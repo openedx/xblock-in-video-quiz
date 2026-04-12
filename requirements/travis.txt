@@ -45,7 +45,7 @@ packaging==26.0
     #   -r requirements/tox.txt
     #   pyproject-api
     #   tox
-platformdirs==4.9.4
+platformdirs==4.9.6
     # via
     #   -r requirements/tox.txt
     #   python-discovery
@@ -61,14 +61,14 @@ pyproject-api==1.10.0
     # via
     #   -r requirements/tox.txt
     #   tox
-python-discovery==1.2.1
+python-discovery==1.2.2
     # via
     #   -r requirements/tox.txt
     #   tox
     #   virtualenv
 requests==2.33.1
     # via coveralls
-rich==14.3.3
+rich==14.3.4
     # via typer
 shellingham==1.5.4
     # via typer
@@ -76,13 +76,13 @@ tomli-w==1.2.0
     # via
     #   -r requirements/tox.txt
     #   tox
-tox==4.52.0
+tox==4.52.1
     # via -r requirements/tox.txt
 typer==0.24.1
     # via coveralls
 urllib3==2.6.3
     # via requests
-virtualenv==21.2.0
+virtualenv==21.2.1
     # via
     #   -r requirements/tox.txt
     #   tox
