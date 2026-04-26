@@ -28,7 +28,7 @@ pytz==2026.1.post1
     # via xblock
 pyyaml==6.0.3
     # via xblock
-simplejson==4.0.1
+simplejson==4.1.1
     # via xblock
 six==1.17.0
     # via
@@ -41,7 +41,7 @@ web-fragments==4.0.0
     # via xblock
 webob==1.8.9
     # via xblock
-xblock==6.0.0
+xblock==6.1.0
     # via -r requirements/base.in
 
 # The following packages are considered to be unsafe in a requirements file:
