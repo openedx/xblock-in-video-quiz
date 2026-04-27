@@ -16,7 +16,7 @@ astroid==4.0.4
     # via
     #   pylint
     #   pylint-celery
-click==8.3.2
+click==8.3.3
     # via
     #   click-log
     #   code-annotations
@@ -65,7 +65,7 @@ mccabe==0.7.0
     # via pylint
 mock==5.2.0
     # via -r requirements/test.txt
-packaging==26.1
+packaging==26.2
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -121,7 +121,7 @@ pyyaml==6.0.3
     #   -r requirements/base.txt
     #   code-annotations
     #   xblock
-simplejson==4.0.1
+simplejson==4.1.1
     # via
     #   -r requirements/base.txt
     #   xblock
@@ -149,7 +149,7 @@ webob==1.8.9
     # via
     #   -r requirements/base.txt
     #   xblock
-xblock==6.0.0
+xblock==6.1.0
     # via -r requirements/base.txt
 
 # The following packages are considered to be unsafe in a requirements file:
