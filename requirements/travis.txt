@@ -6,7 +6,7 @@
 #
 annotated-doc==0.0.4
     # via typer
-cachetools==7.0.6
+cachetools==7.1.0
     # via
     #   -r requirements/tox.txt
     #   tox
@@ -76,13 +76,13 @@ tomli-w==1.2.0
     # via
     #   -r requirements/tox.txt
     #   tox
-tox==4.53.0
+tox==4.53.1
     # via -r requirements/tox.txt
-typer==0.24.2
+typer==0.25.1
     # via coveralls
 urllib3==2.6.3
     # via requests
-virtualenv==21.2.4
+virtualenv==21.3.0
     # via
     #   -r requirements/tox.txt
     #   tox
