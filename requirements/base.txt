@@ -12,6 +12,10 @@ django==5.2.15
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.in
+dnspython==2.8.0
+    # via pymongo
+edx-opaque-keys==4.0.0
+    # via xblock
 fs==2.4.16
     # via xblock
 lxml==6.1.1
@@ -22,6 +26,8 @@ markupsafe==3.0.3
     # via
     #   mako
     #   xblock
+pymongo==4.17.0
+    # via edx-opaque-keys
 python-dateutil==2.9.0.post0
     # via xblock
 pytz==2026.2
@@ -37,11 +43,13 @@ six==1.17.0
     #   python-dateutil
 sqlparse==0.5.5
     # via django
-web-fragments==4.0.0
-    # via xblock
+stevedore==5.8.0
+    # via edx-opaque-keys
+typing-extensions==4.15.0
+    # via edx-opaque-keys
 webob==1.8.10
     # via xblock
-xblock==6.1.0
+xblock==6.3.0
     # via -r requirements/base.in
 
 # The following packages are considered to be unsafe in a requirements file:
