@@ -10,7 +10,7 @@ cachetools==7.1.4
     # via
     #   -r requirements/tox.txt
     #   tox
-certifi==2026.5.20
+certifi==2026.6.17
     # via requests
 charset-normalizer==3.4.7
     # via requests
@@ -18,7 +18,7 @@ colorama==0.4.6
     # via
     #   -r requirements/tox.txt
     #   tox
-coverage[toml]==7.14.1
+coverage[toml]==7.14.2
     # via coveralls
 coveralls==4.1.0
     # via -r requirements/travis.in
@@ -80,7 +80,7 @@ typer==0.26.7
     # via coveralls
 urllib3==2.7.0
     # via requests
-virtualenv==21.5.0
+virtualenv==21.5.1
     # via
     #   -r requirements/tox.txt
     #   tox
