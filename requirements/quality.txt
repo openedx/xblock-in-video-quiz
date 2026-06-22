@@ -25,7 +25,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==3.0.0
     # via edx-lint
-coverage==7.14.1
+coverage==7.14.2
     # via -r requirements/test.txt
 dill==0.4.1
     # via pylint
@@ -89,7 +89,7 @@ pygments==2.20.0
     # via
     #   -r requirements/test.txt
     #   pytest
-pylint==4.0.5
+pylint==4.0.6
     # via
     #   -r requirements/quality.in
     #   edx-lint
@@ -112,7 +112,7 @@ pymongo==4.17.0
     # via
     #   -r requirements/base.txt
     #   edx-opaque-keys
-pytest==9.1.0
+pytest==9.1.1
     # via
     #   -r requirements/test.txt
     #   pytest-django
