@@ -1,34 +1,21 @@
-COMMON_CONSTRAINTS_TXT=requirements/common_constraints.txt
-.PHONY: $(COMMON_CONSTRAINTS_TXT)
-$(COMMON_CONSTRAINTS_TXT):
-	wget -O "$(@)" https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt || touch "$(@)"
-
 .PHONY: requirements
-requirements:  # Install required python packages
-	pip install -e .
+requirements:  ## Install all dependencies for local development
+	uv sync --group dev
 
-.PHONY: requirements_ci
-requirements_ci:  # Install required python packages for testing
-	pip install -r requirements/travis.txt
+.PHONY: upgrade
+upgrade:  ## Update uv.lock with latest packages satisfying pyproject.toml constraints
+	uv run --with edx-lint edx_lint write_uv_constraints pyproject.toml
+	uv lock --upgrade
 
-.PHONY: ci.test
-ci.test: requirements_ci
-ifneq ($(TOX_ENV),)
-	tox -e "$(TOX_ENV)"
-else
-	tox -p all
-endif
+.PHONY: quality
+quality:  ## Run code quality checks
+	uv run --group quality pycodestyle src/invideoquiz/
+	uv run --group quality pylint src/invideoquiz/
 
-upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
-upgrade: $(COMMON_CONSTRAINTS_TXT)  ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
-	pip install -q -r requirements/pip_tools.txt
-	pip install -qr requirements/pip.txt
-	pip-compile --allow-unsafe --rebuild --upgrade -o requirements/pip.txt requirements/pip.in
-	pip-compile --upgrade -o requirements/pip_tools.txt requirements/pip_tools.in
-	pip install -q -r requirements/pip.txt
-	pip install -q -r requirements/pip_tools.txt
-	pip-compile --upgrade -o requirements/base.txt requirements/base.in
-	pip-compile --upgrade -o requirements/test.txt requirements/test.in
-	pip-compile --upgrade -o requirements/quality.txt requirements/quality.in
-	pip-compile --upgrade -o requirements/tox.txt requirements/tox.in
-	pip-compile --upgrade -o requirements/travis.txt requirements/travis.in
+.PHONY: test
+test:  ## Run tests
+	uv run --group test pytest
+
+.PHONY: coverage
+coverage:  ## Run tests with coverage
+	uv run --group test coverage run -m pytest

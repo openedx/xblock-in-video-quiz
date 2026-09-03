@@ -1,6 +1,0 @@
-# Core requirements for using this package
--c constraints.txt
-
-Django
-six
-XBlock

@@ -1,17 +1,27 @@
 name: validate changes
 on:
   pull_request:
+  workflow_call:
 jobs:
   validate:
+    name: ${{ matrix.toxenv }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     strategy:
       matrix:
         python-version: ['3.12']
-        TOX_ENV: [coverage, quality, django42, django52]
+        toxenv: [coverage, quality, django42, django52]
     steps:
-    - uses: actions/checkout@v6
-    - name: setup python
-      uses: actions/setup-python@v6
+    - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       with:
+        fetch-depth: 0
+    - name: Setup uv
+      uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+      with:
+        enable-cache: true
         python-version: ${{ matrix.python-version }}
-    - run: make ci.test TOX_ENV=${{ matrix.TOX_ENV }}
+    - name: Install CI dependencies
+      run: uv sync --group ci
+    - name: Run Tests
+      run: uv run tox -e ${{ matrix.toxenv }}

@@ -1,5 +1,0 @@
-# Requirements for test runs
-
-coverage
-mock
-pytest-django

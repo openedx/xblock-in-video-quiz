@@ -1,0 +1,91 @@
+name: Semantic Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  run_tests:
+    uses: ./.github/workflows/pull-request.yml
+    secrets: inherit
+    permissions:
+      contents: read
+
+  release:
+    needs: run_tests
+    runs-on: ubuntu-latest
+    if: github.ref_name == 'master'
+    concurrency:
+      group: ${{ github.workflow }}-release-${{ github.ref_name }}
+      cancel-in-progress: false
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Setup | Checkout Repository on Release Branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Setup | Force release branch to be at workflow sha
+        run: |
+          git reset --hard ${{ github.sha }}
+
+      - name: Action | Semantic Version Release
+        id: release
+        # Adjust tag with desired version if applicable.
+        uses: python-semantic-release/python-semantic-release@350c48fcb3ffcdfd2e0a235206bc2ecea6b69df0 # v10.5.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git_committer_name: "github-actions"
+          git_committer_email: "actions@users.noreply.github.com"
+          changelog: "false"
+          vcs_release: "false"
+
+      - name: Publish | Create GitHub Release with Assets
+        if: steps.release.outputs.released == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_NOTES: ${{ steps.release.outputs.release_notes }}
+          TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          printf '%s' "$RELEASE_NOTES" > "$RUNNER_TEMP/release_notes.md"
+          gh release create "$TAG" \
+            --verify-tag \
+            --title "$TAG" \
+            --notes-file "$RUNNER_TEMP/release_notes.md" \
+            dist/*
+
+      - name: Upload | Distribution Artifacts
+        if: steps.release.outputs.released == 'true'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: dist
+          path: dist/
+          if-no-files-found: error
+
+    outputs:
+      released: ${{ steps.release.outputs.released || 'false' }}
+      version: ${{ steps.release.outputs.version }}
+
+  publish_to_pypi:
+    needs: release
+    runs-on: ubuntu-latest
+    if: needs.release.outputs.released == 'true'
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Setup | Download Build Artifacts
+        id: artifact-download
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: dist
+          path: dist/
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
