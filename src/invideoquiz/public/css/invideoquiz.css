@@ -17,18 +17,31 @@
     margin-bottom: 0;
     border-bottom: none;
 }
+.in-video-problem {
+    padding: 25px;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
 #course-content .vert-mod .vert.in-video-problem-wrapper .in-video-problem,
 #seq_content .vert-mod .vert.in-video-problem-wrapper .in-video-problem {
     position: absolute;
     top: 35px;
-    padding: 25px 25px 0 25px;
-    background: white;
-    box-sizing: border-box;
     width: 100%;
     height: 467px;
-    overflow-y: scroll;
-    z-index: 99;
 }
+.in-video-problem-content {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding: 25px 25px 0;
+}
+
 .video-fullscreen #course-content .vert-mod .vert.in-video-problem-wrapper .in-video-problem,
 .video-fullscreen #seq_content .vert-mod .vert.in-video-problem-wrapper .in-video-problem {
     position: fixed;
@@ -37,6 +50,23 @@
     left: 0;
     right: 0;
     bottom: 53px;
+    z-index: 10000;
+}
+
+.video.video-fullscreen.in-video-quiz-active .tc-wrapper {
+    position: relative;
+}
+
+.video.video-fullscreen.in-video-quiz-active .tc-wrapper .video-wrapper {
+    visibility: hidden;
+}
+
+.video.video-fullscreen.in-video-quiz-active .tc-wrapper > .subtitles {
+    display: block;
+    visibility: visible;
+}
+
+.video.video-fullscreen .tc-wrapper > .in-video-problem.in-video-problem-fullscreen-mounted {
     z-index: 10000;
 }
 .video-controls {
@@ -51,9 +81,69 @@
     height: 13px;
     width: 13px;
 }
+.in-video-problem-actions {
+    position: sticky;
+    bottom: 0;
+    clear: both;
+    padding-top: 15px;
+    background: #fff;
+    z-index: 1;
+}
+
 .in-video-continue {
     float: right;
     height: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 0;
     text-transform: uppercase;
+}
+
+.in-video-jump-back {
+    float: right;
+    margin-right: 15px;
+    background: #fff;
+    padding: 7px 18px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.in-video-jump-back svg {
+  flex-shrink: 0;
+}
+
+/* Studio author preview */
+.in-video-quiz-studio-author {
+    margin: 0;
+    background: #fff;
+    color: #393939;
+}
+
+.in-video-quiz-studio-author .in-video-quiz-studio-schedule {
+    margin: 0 0 0.75rem 1.25rem;
+    padding: 0;
+    list-style: disc;
+}
+
+.in-video-quiz-studio-author .in-video-quiz-studio-schedule li {
+    margin-bottom: 0.25rem;
+}
+
+.in-video-quiz-studio-author .in-video-quiz-time {
+    font-weight: 600;
+}
+
+.in-video-quiz-studio-author .in-video-quiz-studio-hint {
+    margin-bottom: 0;
+    color: #5c6770;
+}
+
+.xmodule_display.xmodule_VideoBlock .video {
+    background: whitesmoke;
+    display: block;
+    margin: 0 -12px;
+    padding: 12px;
+    border-radius: 5px;
+    outline: none;
+    height: 100% !important;
 }
